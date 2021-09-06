@@ -1,0 +1,36 @@
+##########################################################################
+# @fr4anklinux
+##########################################################################
+Port 22
+Protocol 2
+SyslogFacility AUTHPRIV
+LoginGraceTime 2m
+PermitRootLogin no
+HostbasedAuthentication no
+PermitEmptyPasswords no
+PasswordAuthentication yes
+PubkeyAuthentication yes
+RSAAuthentication yes
+IgnoreRhosts yes
+X11Forwarding yes
+AllowTcpForwarding yes
+Banner /etc/issue
+UsePAM yes
+UseDNS no
+MaxStartups 40
+Subsystem sftp /usr/libexec/openssh/sftp-server
+PidFile /var/run/sshd.pid
+ClientAliveInterval 0
+ClientAliveInterval 3600
+ClientAliveCountMax 30
+GatewayPorts yes
+ClientAliveCountMax 3
+Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
+#hmac-md5
+PermitUserEnvironment no
+#MACs hmac-sha2-512,hmac-sha2-256
+LogLevel INFO
+MaxAuthTries 3
+AllowUsers   admin
+ChallengeResponseAuthentication no
+IPQoS throughput
