@@ -31,6 +31,6 @@ PermitUserEnvironment no
 #MACs hmac-sha2-512,hmac-sha2-256
 LogLevel INFO
 MaxAuthTries 3
-AllowUsers   admin
+AllowUsers   franklin
 ChallengeResponseAuthentication no
 IPQoS throughput
